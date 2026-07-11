@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Beerus IA</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="orb-wrap">
+        <div class="orb" id="orb"></div>
+      </div>
+      <div class="header-text">
+        <h1>BEERUS<span>·IA</span></h1>
+        <p id="status">en sommeil</p>
+      </div>
+    </header>
+
+    <main class="chat" id="chat">
+      <div class="msg bot">
+        <p>Hmph. Tu as osé me réveiller. Parle vite, mortel — qu'est-ce que tu veux ?</p>
+      </div>
+    </main>
+
+    <div class="image-preview" id="imagePreview" hidden>
+      <img id="previewImg" alt="Aperçu de l'image à envoyer" />
+      <button type="button" id="removeImage" aria-label="Retirer l'image">✕</button>
+    </div>
+
+    <div class="doc-preview" id="docPreview" hidden>
+      <span class="doc-icon">📄</span>
+      <span class="doc-name" id="docName"></span>
+      <button type="button" id="removeDoc" aria-label="Retirer le document">✕</button>
+    </div>
+
+    <form class="composer" id="composer">
+      <button type="button" id="photoBtn" aria-label="Envoyer une photo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <path d="M4 8h3l2-2h6l2 2h3v11H4V8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <circle cx="12" cy="13.5" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </button>
+      <input type="file" id="fileInput" accept="image/*" hidden />
+      <button type="button" id="docBtn" aria-label="Envoyer un document PDF">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <path d="M7 3h7l5 5v13H7V3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M14 3v5h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <input type="file" id="docInput" accept="application/pdf" hidden />
+      <input
+        id="input"
+        type="text"
+        placeholder="Adresse-toi au Dieu de la Destruction..."
+        autocomplete="off"
+      />
+      <button type="submit" id="sendBtn" aria-label="Envoyer">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <path d="M3 11L21 3L13 21L11 13L3 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
